@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五子棋</title>
+
+<link rel="stylesheet" href="css/g2-style.css">
+
+</head>
+<body style="color: color: #F0E3AA;">
+<marquee style="color: #51C5FE; font-size: 18px;"  onMouseOver="this.stop()" onMouseOut="this.start()">踏破芒鞋，烟雨任平生。 慧行坚勇，究畅恒无极。</marquee>
+
+<div id="box">
+	<div id="centent">
+		<canvas id="canvas" width="450" height="450"></canvas>
+	</div>
+	<button id="button">撤回</button>
+	<button id="anew">重开</button>
+	<div id="state">
+		<div class="state-chess Bchess"></div>
+		<div class="chessName">黑棋走</div>
+	</div>
+	<div id="winner">
+		<div class="state-chess Bchess"></div>
+		<div class="chessName"></div>
+	</div>
+</div>
+
+<script src="js/g2-script.js"></script>
+<script>
+    game.drawLine()
+    game.canvas.addEventListener("mousedown",game.canvasClick)
+    game.regret_chess.addEventListener("mousedown",game.regret)
+    game.anew.addEventListener("mousedown",game.anewClick)
+ 
+</script>
+    <p style="text-align: center; font-size: 18px;">小不火|个人主页</p>
+    <p style="text-align: center; color: #747474;">蘑菇森林的尽头，新世界的起点</p>
+</body>
+</html>
